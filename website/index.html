@@ -5,15 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Relay — keep your AI work going</title>
   <meta name="description" content="When Claude Code, Codex or Antigravity stops at its limit, Relay packs what it was doing and opens it in another AI. Free for Windows. Works without an API key." />
-  <meta name="theme-color" content="#1b1a18" />
+  <meta name="theme-color" content="#161514" />
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="/assets/icon-180.png" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Relay — when your AI stops halfway, the next one picks up" />
-  <meta property="og:description" content="A small panel on the side of your Windows screen that hands an AI's unfinished work to the next AI. No re-explaining." />
-  <meta property="og:image" content="https://relayhandoff.agreshagrawal.com/assets/og.png" />
-  <meta property="og:url" content="https://relayhandoff.agreshagrawal.com/" />
   <link rel="canonical" href="https://relayhandoff.agreshagrawal.com/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://relayhandoff.agreshagrawal.com/" />
+  <meta property="og:title" content="Relay — when one AI stops, the next one picks up" />
+  <meta property="og:description" content="A small button on the edge of your Windows screen that hands an AI's unfinished work to the next AI. No re-explaining." />
+  <meta property="og:image" content="https://relayhandoff.agreshagrawal.com/assets/og.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="preload" href="/assets/nunito.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="/styles.css" />
@@ -25,20 +25,21 @@
   <header class="nav" id="top">
     <div class="wrap nav-in">
       <a class="brand" href="#top" aria-label="Relay home">
-        <img src="/assets/logo.svg" alt="" width="30" height="30" />
+        <img src="/assets/logo.svg" alt="" width="28" height="28" />
         <span>Relay</span>
       </a>
       <nav class="nav-links" aria-label="Sections">
         <a href="#demo">Demo</a>
-        <a href="#how">How it works</a>
         <a href="#features">Features</a>
+        <a href="#apps">Works with</a>
+        <a href="#get-started">Download</a>
         <a href="#faq">FAQ</a>
       </nav>
       <div class="nav-cta">
         <a class="icon-link" href="https://github.com/agresh-agrawal/relay" aria-label="Relay on GitHub">
           <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.58.23 2.75.11 3.04.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.39-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg>
         </a>
-        <a class="btn btn-sm" href="#download">Download</a>
+        <a class="pill pill-sm" href="https://github.com/agresh-agrawal/relay/releases/latest/download/Relay-Setup.exe">Download</a>
       </div>
     </div>
   </header>
@@ -46,107 +47,261 @@
   <main id="main">
     <!-- Hero -->
     <section class="hero">
+      <div class="wash wash-hero" aria-hidden="true"></div>
       <div class="wrap hero-in">
-        <div class="hero-copy">
-          <p class="eyebrow"><span class="dot"></span>Free for Windows 10 and 11</p>
-          <h1>When your AI stops halfway, the next one picks&nbsp;up.</h1>
-          <p class="lede">A small Relay button sits on the edge of your screen and follows your Claude Code, Codex and Antigravity chats. When one runs out of messages or memory, click it: Relay packs what the AI was doing and opens it in another AI. You never explain the job twice.</p>
-          <div class="hero-actions">
-            <a class="btn" href="https://github.com/agresh-agrawal/relay/releases/latest/download/Relay-Setup.exe" data-download>
-              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
-              Download for Windows
-            </a>
-            <a class="btn btn-ghost" href="#demo">Watch the demo</a>
-          </div>
-          <p class="fine">5 MB installer · no admin rights · works without an API key</p>
-          <p class="os-note" hidden>Relay is a Windows app. Open this page on your Windows PC to download it.</p>
+        <span class="mark"><img src="/assets/logo.svg" alt="" width="36" height="36" /></span>
+        <h1>When one AI stops,<br />the next one picks up</h1>
+        <p class="lede">Relay hands your Claude Code, Codex and Antigravity work to the next AI the moment one hits its limit. No re-explaining, no lost progress.</p>
+        <div class="actions">
+          <a class="pill" href="https://github.com/agresh-agrawal/relay/releases/latest/download/Relay-Setup.exe">
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+            Download for Windows
+          </a>
+          <a class="pill pill-ghost" href="#demo">Watch the demo</a>
         </div>
+        <p class="fine">Free · Windows 10 and 11 · works without an API key</p>
+        <p class="os-note" hidden>Relay is a Windows app. Open this page on your Windows PC to download it.</p>
 
-        <div class="screen" aria-label="The Relay button on the right edge of a Windows screen, with the Relay panel open beside it over Claude Code">
-          <div class="screen-in">
-            <div class="app-win">
-              <div class="win-bar"><i></i><i></i><i></i><span>leadflow-site — Claude Code</span></div>
-              <div class="term">
-                <p class="t-user">&gt; Now do the services cards and then the footer.</p>
-                <p><span class="t-dot ok"></span>Write <b>services.html</b></p>
-                <p><span class="t-dot ok"></span>3 of 6 service cards done</p>
-                <p><span class="t-dot"></span>Edit <b>services.html</b> · cards 4–6</p>
-                <p class="t-stop">Claude usage limit reached · resets 5pm</p>
-                <p class="t-cursor">&gt;</p>
-              </div>
-            </div>
-            <img class="panel-shot" src="/assets/shots/home.webp" width="440" height="860" alt="Relay panel: the LeadFlow chat stopped at its usage limit, with a Continue in another AI button" />
-            <span class="edge-btn" aria-hidden="true"><img src="/assets/logo.svg" alt="" width="14" height="14" /><i></i></span>
-          </div>
-          <div class="taskbar"><i></i><i></i><i></i><i></i></div>
+        <div class="works">
+          <p>Works with the AI tools you already use</p>
+          <ul>
+            <li>Claude Code</li><li>Codex</li><li>Antigravity</li><li>VS Code</li><li>Cursor</li><li>ChatGPT</li><li>Gemini</li>
+          </ul>
         </div>
       </div>
-    </section>
 
-    <!-- Problem -->
-    <section class="problem">
-      <div class="wrap narrow">
-        <p class="stop-line">Claude usage limit reached · resets 5pm</p>
-        <p class="problem-text">Three hours into building a website, the AI stops. Starting again somewhere else means explaining the goal, your rules, what’s finished, which files changed and what broke. <strong>Relay does that part for you, in about two seconds.</strong></p>
+      <!-- Product shot: Claude Code at its limit, Relay open beside its button on the screen edge -->
+      <div class="wrap">
+        <div class="device" aria-label="Relay open beside its button on the right edge of the screen, next to Claude Code which has stopped at its usage limit">
+          <div class="desk">
+            <div class="win">
+              <div class="win-bar"><i></i><i></i><i></i><span>leadflow-site — Claude Code</span></div>
+              <div class="win-body">
+                <aside class="tree" aria-hidden="true">
+                  <p class="tree-h">LEADFLOW-SITE</p>
+                  <p class="dim">.relay</p>
+                  <p>js</p>
+                  <p class="in">lead-form.js</p>
+                  <p>styles</p>
+                  <p class="in">main.css</p>
+                  <p class="in">tokens.css</p>
+                  <p>about.html</p>
+                  <p>index.html</p>
+                  <p class="on">services.html</p>
+                </aside>
+                <div class="term">
+                  <p class="t-you">&gt; Build a lead-generation website for LeadFlow: home, about, services, pricing, contact.</p>
+                  <p><span class="t-dot ok"></span>Write <b>styles/tokens.css</b></p>
+                  <p><span class="t-dot ok"></span>Write <b>index.html</b> · hero + lead form</p>
+                  <p><span class="t-dot ok"></span>Write <b>about.html</b></p>
+                  <p class="t-you">&gt; Now do the services cards and then the footer.</p>
+                  <p><span class="t-dot ok"></span>Write <b>services.html</b> · 3 of 6 cards</p>
+                  <p><span class="t-dot"></span>Edit <b>services.html</b> · cards 4–6</p>
+                  <p class="t-stop">Claude usage limit reached · resets 5pm</p>
+                </div>
+              </div>
+            </div>
+            <img class="float-panel" src="/assets/shots/home.webp" width="440" height="860" alt="Relay: the LeadFlow chat stopped at its usage limit, with a Continue in another AI button" />
+            <span class="edge-btn" aria-hidden="true"><img src="/assets/logo.svg" alt="" width="14" height="14" /><i></i></span>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- Demo -->
     <section class="section" id="demo">
       <div class="wrap">
-        <div class="head">
-          <p class="kicker">Demo</p>
+        <div class="head center">
           <h2>Watch a handoff</h2>
           <p class="sub">Claude Code stops at its limit. Relay hands the job to Antigravity, which carries on from the exact next step.</p>
         </div>
-
-        <div class="demo" data-demo>
-          <div class="pane">
-            <div class="pane-head"><span class="badge b-cc">CC</span>Claude Code</div>
-            <div class="pane-body mono">
-              <p class="d" style="--i:0"><span class="muted">&gt;</span> Build a lead-generation website for LeadFlow: home, about, services, pricing, contact.</p>
-              <p class="d ok" style="--i:1">✓ Home page with hero + lead form</p>
-              <p class="d ok" style="--i:2">✓ About page</p>
-              <p class="d" style="--i:3">… Services page, 3 of 6 cards</p>
-              <p class="d stop" style="--i:4">Usage limit reached · resets 5pm</p>
+        <div class="demo-stage">
+          <div class="wash wash-a" aria-hidden="true"></div>
+          <div class="demo" data-demo>
+            <div class="pane">
+              <div class="pane-head"><span class="badge b-cc">CC</span>Claude Code</div>
+              <div class="pane-body mono">
+                <p class="d" style="--i:0"><span class="muted">&gt;</span> Build a lead-generation website for LeadFlow: home, about, services, pricing, contact.</p>
+                <p class="d ok" style="--i:1">✓ Home page with hero + lead form</p>
+                <p class="d ok" style="--i:2">✓ About page</p>
+                <p class="d" style="--i:3">… Services page, 3 of 6 cards</p>
+                <p class="d stop" style="--i:4">Usage limit reached · resets 5pm</p>
+              </div>
+            </div>
+            <div class="pane pane-relay">
+              <div class="pane-head"><img src="/assets/logo.svg" alt="" width="20" height="20" />Relay</div>
+              <ul class="pane-body steps">
+                <li class="d" style="--i:5"><span class="tick"></span>Gathered 7 parts of the chat</li>
+                <li class="d" style="--i:6"><span class="tick"></span>Hid 1 password or key</li>
+                <li class="d" style="--i:7"><span class="tick"></span>Saved <code>.relay/HANDOFF.md</code></li>
+                <li class="d" style="--i:8"><span class="tick"></span>Opened Antigravity</li>
+                <li class="d" style="--i:9"><span class="tick"></span>Starting message copied</li>
+              </ul>
+            </div>
+            <div class="pane">
+              <div class="pane-head"><span class="badge b-ag">Ag</span>Antigravity</div>
+              <div class="pane-body chat">
+                <p class="bubble you d" style="--i:10">Continue the task in this project. Your full brief is in .relay/HANDOFF.md. Read it, then start right away on “Your next step”.</p>
+                <p class="bubble ai d" style="--i:11">Read the handoff. Adding the last three service cards: Email nurture, CRM setup and Analytics. Keeping the nav sticky and the hero headline as it is.</p>
+              </div>
             </div>
           </div>
-
-          <div class="pane pane-relay">
-            <div class="pane-head"><img src="/assets/logo.svg" alt="" width="20" height="20" />Relay</div>
-            <ul class="pane-body steps">
-              <li class="d" style="--i:5"><span class="tick"></span>Gathered 7 parts of the chat</li>
-              <li class="d" style="--i:6"><span class="tick"></span>Hid 1 password or key</li>
-              <li class="d" style="--i:7"><span class="tick"></span>Saved <code>.relay/HANDOFF.md</code></li>
-              <li class="d" style="--i:8"><span class="tick"></span>Opened Antigravity</li>
-              <li class="d" style="--i:9"><span class="tick"></span>Starting message copied</li>
-            </ul>
-          </div>
-
-          <div class="pane">
-            <div class="pane-head"><span class="badge b-ag">Ag</span>Antigravity</div>
-            <div class="pane-body chat">
-              <p class="bubble you d" style="--i:10">Continue the task in this project. Your full brief is in .relay/HANDOFF.md. Read it, then start right away on “Your next step”.</p>
-              <p class="bubble ai d" style="--i:11">Read the handoff. Adding the last three service cards: Email nurture, CRM setup and Analytics. Keeping the nav sticky and the hero headline as it is.</p>
-            </div>
+          <div class="demo-foot">
+            <button class="pill pill-ghost pill-sm" type="button" data-replay>
+              <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7L3 8M3 3v5h5"/></svg>
+              Play again
+            </button>
           </div>
         </div>
-        <div class="demo-foot">
-          <button class="btn btn-ghost btn-sm" type="button" data-replay>
-            <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7L3 8M3 3v5h5"/></svg>
-            Play again
-          </button>
+      </div>
+    </section>
+
+    <!-- Get started -->
+    <section class="section" id="get-started">
+      <div class="wrap">
+        <div class="head center">
+          <h2>Get started</h2>
+          <p class="sub">Relay is free. Pick how you want it.</p>
+        </div>
+        <div class="plans">
+          <article class="plan featured reveal">
+            <div class="plan-top"><h3>Installer</h3><span class="tag">Recommended</span></div>
+            <p class="plan-desc">Installs just for you, with no admin rights. Relay starts with Windows as a small button on the screen edge.</p>
+            <p class="price">Free <small>5 MB</small></p>
+            <a class="pill block" href="https://github.com/agresh-agrawal/relay/releases/latest/download/Relay-Setup.exe">Download installer</a>
+          </article>
+          <article class="plan reveal">
+            <div class="plan-top"><h3>Portable</h3></div>
+            <p class="plan-desc">Nothing to install. Run Relay from any folder; it uses the same settings as the installed app.</p>
+            <p class="price">Free <small>10 MB</small></p>
+            <a class="pill pill-ghost block" href="https://github.com/agresh-agrawal/relay/releases/latest/download/Relay-Portable.exe">Download portable</a>
+          </article>
+          <article class="plan reveal">
+            <div class="plan-top"><h3>Your own AI</h3><span class="tag tag-quiet">Optional</span></div>
+            <p class="plan-desc">Relay writes handoffs offline with its own rules. Add a key for Anthropic, OpenAI, Gemini or OpenRouter, or use Ollama, and it writes an even sharper brief.</p>
+            <p class="price">Your key <small>stays on your PC</small></p>
+            <a class="pill pill-ghost block" href="#privacy">How keys are kept</a>
+          </article>
+        </div>
+        <p class="note center">If Windows says <b>“Windows protected your PC”</b>, click <b>More info → Run anyway</b>. Relay isn’t code-signed yet, which is normal for new apps.</p>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="section" id="features">
+      <div class="wrap">
+        <div class="head center">
+          <h2>Built for the moment your AI stops</h2>
+          <p class="sub">Everything the next AI needs, and nothing it doesn’t.</p>
+        </div>
+
+        <div class="feature reveal">
+          <div class="stage">
+            <div class="wash wash-a" aria-hidden="true"></div>
+            <img class="ui ui-1" src="/assets/shots/handoff.webp" width="440" height="860" loading="lazy" alt="Relay handoff: ready to hand off, with next-step chips" />
+            <img class="ui ui-2" src="/assets/shots/handoff-parts.webp" width="440" height="860" loading="lazy" alt="Relay handoff parts: what you asked, still to do, already done, your rules" />
+          </div>
+          <div class="feature-copy">
+            <h3>Picks up exactly where it stopped</h3>
+            <p>Relay reads the chat your AI already saved and keeps what matters: your goal, your rules word for word, what’s done, what’s left, where it stopped and which files changed. Passwords and keys are hidden first.</p>
+          </div>
+        </div>
+
+        <div class="feature flip reveal">
+          <div class="stage">
+            <div class="wash wash-b" aria-hidden="true"></div>
+            <img class="ui ui-solo" src="/assets/shots/home.webp" width="440" height="860" loading="lazy" alt="Relay home: Claude and Codex usage limits and the latest chat" />
+          </div>
+          <div class="feature-copy">
+            <h3>Knows your limits</h3>
+            <p>See when Claude’s 5-hour window resets and roughly how much is used, Codex’s exact numbers, and how full each chat’s memory is. When a limit resets, Relay offers to bring the newest work back.</p>
+          </div>
+        </div>
+
+        <div class="feature reveal">
+          <div class="stage">
+            <div class="wash wash-c" aria-hidden="true"></div>
+            <img class="ui ui-1" src="/assets/shots/relay-pick.webp" width="440" height="860" loading="lazy" alt="Continue in: coding apps, terminal agents and chat websites" />
+            <img class="ui ui-2" src="/assets/shots/relay-done.webp" width="440" height="860" loading="lazy" alt="Over to Antigravity: handoff saved and starting message copied" />
+          </div>
+          <div class="feature-copy">
+            <h3>One click to the next AI</h3>
+            <p>Pick Antigravity, VS Code, Cursor, a terminal agent or a chat website. Relay saves the handoff in your project, opens the app and copies a short starting message. Paste, and it carries on.</p>
+          </div>
+        </div>
+
+        <div class="feature flip reveal">
+          <div class="stage">
+            <div class="wash wash-d" aria-hidden="true"></div>
+            <div class="mini-desk" aria-hidden="true">
+              <div class="mini-win"><span></span><span></span><span></span><span class="short"></span></div>
+              <img class="mini-panel" src="/assets/shots/home.webp" width="440" height="860" loading="lazy" alt="" />
+              <span class="edge-btn"><img src="/assets/logo.svg" alt="" width="12" height="12" /><i></i></span>
+            </div>
+          </div>
+          <div class="feature-copy">
+            <h3>Always one click away</h3>
+            <p>A small button sits on the edge of your screen. Click it and Relay opens over your work; click again and it’s gone. Its dot turns red when an AI stops. Drag it anywhere along the edge, and it hides for full-screen videos and games.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Works with -->
+    <section class="section" id="apps">
+      <div class="wrap">
+        <div class="head center">
+          <h2>Bring Relay to your workflow</h2>
+          <p class="sub">It reads the chats your AI tools already save and hands off to whichever one you pick next.</p>
+        </div>
+        <ul class="app-row reveal" aria-label="Apps Relay works with">
+          <li><span class="tile b-cc">CC</span>Claude Code</li>
+          <li><span class="tile b-cx">Cx</span>Codex</li>
+          <li><span class="tile b-ag">Ag</span>Antigravity</li>
+          <li><span class="tile b-vs">VS</span>VS Code</li>
+          <li><span class="tile b-cu">Cu</span>Cursor</li>
+          <li><span class="tile b-ws">Ws</span>Windsurf</li>
+          <li><span class="tile b-gc">Gc</span>Gemini CLI</li>
+          <li><span class="tile b-gp">Gp</span>ChatGPT</li>
+          <li><span class="tile b-cl">Cl</span>Claude</li>
+          <li><span class="tile b-ge">Ge</span>Gemini</li>
+          <li><span class="tile b-as">AS</span>AI Studio</li>
+        </ul>
+
+        <div class="head center continue-head">
+          <h2>One handoff, wherever you continue</h2>
+        </div>
+        <div class="cards4">
+          <article class="card reveal">
+            <figure><img src="/assets/shots/crop-coding.webp" width="696" height="360" loading="lazy" alt="Coding apps: Antigravity, VS Code, Cursor, Windsurf" /></figure>
+            <h3>Coding apps</h3>
+            <p>Opens your project with the handoff saved inside it.</p>
+          </article>
+          <article class="card reveal">
+            <figure><img src="/assets/shots/crop-terminal.webp" width="696" height="360" loading="lazy" alt="Terminal agents: Claude Code, Codex CLI, Gemini CLI" /></figure>
+            <h3>Terminal agents</h3>
+            <p>Starts a fresh agent that reads the handoff itself.</p>
+          </article>
+          <article class="card reveal">
+            <figure><img src="/assets/shots/crop-chats.webp" width="696" height="360" loading="lazy" alt="Chat websites: ChatGPT, Claude, Gemini, AI Studio" /></figure>
+            <h3>Chat websites</h3>
+            <p>Copies one trimmed message, ready to paste.</p>
+          </article>
+          <article class="card reveal">
+            <figure><img src="/assets/shots/crop-paste.webp" width="696" height="360" loading="lazy" alt="Bring in a web chat from ChatGPT, Claude.ai or Gemini" /></figure>
+            <h3>Web chats, too</h3>
+            <p>Paste a ChatGPT, Claude.ai or Gemini chat to hand it off.</p>
+          </article>
         </div>
       </div>
     </section>
 
     <!-- What the next AI reads -->
-    <section class="section alt" id="handoff">
+    <section class="section" id="handoff">
       <div class="wrap split">
         <div class="split-copy">
-          <p class="kicker">The handoff</p>
           <h2>A short brief, not a chat dump</h2>
-          <p class="sub">The next AI gets what a fresh pair of hands needs and nothing else, so it goes straight to work.</p>
+          <p class="sub">The next AI gets what a fresh pair of hands needs, so it goes straight to work.</p>
           <ul class="checks">
             <li><b>About 640 tokens</b> for a three-hour session</li>
             <li><b>Your rules, word for word</b>, like “keep the nav sticky”</li>
@@ -200,183 +355,30 @@ It hit its usage limit (“Claude usage limit reached · resets 5pm”).
       </div>
     </section>
 
-    <!-- How it works -->
-    <section class="section" id="how">
-      <div class="wrap">
-        <div class="head">
-          <p class="kicker">How it works</p>
-          <h2>Three steps, and two of them happen on their own</h2>
-        </div>
-        <ol class="how">
-          <li class="reveal">
-            <figure class="shot"><img src="/assets/shots/setup-scan.webp" width="440" height="860" loading="lazy" alt="Relay setup: found 4 AI chats on this PC" /></figure>
-            <span class="num">1</span>
-            <h3>Install it. It finds your chats.</h3>
-            <p>A small Relay button appears on the edge of your screen. Relay reads the chats Claude Code, Codex and Antigravity already save, and never changes them.</p>
-          </li>
-          <li class="reveal">
-            <figure class="shot"><img src="/assets/shots/home.webp" width="440" height="860" loading="lazy" alt="Relay home: usage limits and the latest chat" /></figure>
-            <span class="num">2</span>
-            <h3>Work as usual. Relay keeps watch.</h3>
-            <p>The button’s dot turns red when an AI stops. Click it to see your 5-hour limits and how full each chat’s memory is. Relay saves a handoff in your project every few minutes, even while it’s closed.</p>
-          </li>
-          <li class="reveal">
-            <figure class="shot"><img src="/assets/shots/relay-pick.webp" width="440" height="860" loading="lazy" alt="Relay: choose which AI to continue in" /></figure>
-            <span class="num">3</span>
-            <h3>When an AI stops, pick the next one.</h3>
-            <p>Press <kbd>Ctrl</kbd> <kbd>Alt</kbd> <kbd>R</kbd> or tap <em>Continue in another AI</em>. Relay opens your project there and copies a starting message. Paste, and it carries on.</p>
-          </li>
-        </ol>
-      </div>
-    </section>
-
-    <!-- Features -->
-    <section class="section alt" id="features">
-      <div class="wrap">
-        <div class="head">
-          <p class="kicker">Features</p>
-          <h2>Small panel, a lot less starting over</h2>
-        </div>
-        <div class="grid">
-          <article class="card reveal">
-            <span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
-            <h3>Your 5-hour limits</h3>
-            <p>See when Claude’s 5-hour window resets and roughly how much is used. Codex shows its exact numbers, weekly too.</p>
-          </article>
-          <article class="card reveal">
-            <span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4M8 13h8M8 17h5"/></svg></span>
-            <h3>Handoff always saved</h3>
-            <p>While an AI works, Relay keeps <code>.relay/HANDOFF.md</code> up to date in the project. A crash or a sudden limit never loses your place.</p>
-          </article>
-          <article class="card reveal">
-            <span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg></span>
-            <h3>Secrets stay home</h3>
-            <p>API keys, tokens and passwords are found and hidden before a handoff leaves your PC. Your own AI keys live in Windows Credential Manager.</p>
-          </article>
-          <article class="card reveal">
-            <span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22v-5M9 8V2M15 8V2"/><path d="M18 8v5a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V8Z"/></svg></span>
-            <h3>No API key needed</h3>
-            <p>Built-in rules write the handoff offline. Add a key for Anthropic, OpenAI, Gemini or OpenRouter, or use Ollama, for an even sharper brief.</p>
-          </article>
-          <article class="card reveal">
-            <span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg></span>
-            <h3>Reminds you at reset</h3>
-            <p>When a limit resets, the edge tab turns green and Relay offers to bring the newest work back to that AI.</p>
-          </article>
-          <article class="card reveal">
-            <span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 17 2 2 4-4M3 7l2 2 4-4M13 6h8M13 12h8M13 18h8"/></svg></span>
-            <h3>Pick the next move</h3>
-            <p>One tap tells the next AI where to start: finish what’s left, fix problems first, test everything, or review before changing.</p>
-          </article>
-          <article class="card reveal">
-            <span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg></span>
-            <h3>Screenshots too</h3>
-            <p>Press <kbd>Ctrl</kbd> <kbd>Alt</kbd> <kbd>S</kbd> to add what’s on screen. Images from the chat come along, so the next AI sees what you saw.</p>
-          </article>
-          <article class="card reveal">
-            <span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 14 4-4"/><path d="M3.34 19a10 10 0 1 1 17.32 0"/></svg></span>
-            <h3>One click away</h3>
-            <p>The button on the screen edge opens Relay over your work. Drag it up or down; it hides for full-screen videos and games. Closed, Relay uses about 50 MB.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Works with -->
-    <section class="section" id="apps">
-      <div class="wrap">
-        <div class="head">
-          <p class="kicker">Works with</p>
-          <h2>From the AI that stopped, to the one you pick</h2>
-        </div>
-        <div class="apps">
-          <div class="apps-col reveal">
-            <h3>Reads from</h3>
-            <ul class="chips">
-              <li><span class="badge b-cc">CC</span>Claude Code</li>
-              <li><span class="badge b-cx">Cx</span>Codex</li>
-              <li><span class="badge b-ag">Ag</span>Antigravity</li>
-              <li><span class="badge b-web">Wb</span>Web chats you paste in</li>
-            </ul>
-          </div>
-          <div class="apps-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
-          <div class="apps-col reveal">
-            <h3>Hands off to</h3>
-            <ul class="chips">
-              <li><span class="badge b-ag">Ag</span>Antigravity</li>
-              <li><span class="badge b-vs">VS</span>VS Code</li>
-              <li><span class="badge b-cu">Cu</span>Cursor</li>
-              <li><span class="badge b-ws">Ws</span>Windsurf</li>
-              <li><span class="badge b-cc">CC</span>Claude Code</li>
-              <li><span class="badge b-cx">Cx</span>Codex CLI</li>
-              <li><span class="badge b-gc">Gc</span>Gemini CLI</li>
-              <li><span class="badge b-gp">Gp</span>ChatGPT</li>
-              <li><span class="badge b-cl">Cl</span>Claude</li>
-              <li><span class="badge b-ge">Ge</span>Gemini</li>
-              <li><span class="badge b-as">AS</span>AI Studio</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Screenshots -->
-    <section class="section alt" id="screens">
-      <div class="wrap">
-        <div class="head">
-          <p class="kicker">Screenshots</p>
-          <h2>Plain words, calm colours</h2>
-          <p class="sub">No dashboards to learn. Everything is in one narrow panel.</p>
-        </div>
-      </div>
-      <div class="gallery" tabindex="0" aria-label="Relay screenshots">
-        <figure class="shot"><img src="/assets/shots/home.webp" width="440" height="860" loading="lazy" alt="Home: your AI chats and usage limits" /><figcaption>Your chats and limits</figcaption></figure>
-        <figure class="shot"><img src="/assets/shots/handoff.webp" width="440" height="860" loading="lazy" alt="Handoff: what the next AI gets, with next-step chips" /><figcaption>What the next AI gets</figcaption></figure>
-        <figure class="shot"><img src="/assets/shots/relay-pick.webp" width="440" height="860" loading="lazy" alt="Continue in: coding apps, terminals and chat websites" /><figcaption>Pick where to continue</figcaption></figure>
-        <figure class="shot"><img src="/assets/shots/relay-done.webp" width="440" height="860" loading="lazy" alt="Over to Antigravity: handoff saved and starting message copied" /><figcaption>Handed off</figcaption></figure>
-        <figure class="shot"><img src="/assets/shots/settings.webp" width="440" height="860" loading="lazy" alt="Settings: simple or advanced, your own AI, where Relay sits" /><figcaption>Simple settings</figcaption></figure>
-      </div>
-    </section>
-
     <!-- Privacy -->
     <section class="section" id="privacy">
-      <div class="wrap split privacy">
-        <div class="split-copy">
-          <p class="kicker">Privacy</p>
-          <h2>Everything stays on your PC</h2>
-          <p class="sub">Relay has no account, no sign-up and no tracking. It only talks to the internet if you add your own AI key, and then only to the provider you chose.</p>
-        </div>
-        <ul class="facts">
-          <li class="reveal"><b>Read-only.</b> Relay reads the chat files your AI apps already save. It never edits them.</li>
-          <li class="reveal"><b>Secrets removed.</b> Keys, tokens and passwords are taken out of every handoff before it leaves.</li>
-          <li class="reveal"><b>Keys locked away.</b> Your AI keys go to Windows Credential Manager, never into files.</li>
-          <li class="reveal"><b>Password managers skipped.</b> The optional activity timeline ignores them, and you can pause it any time.</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Download -->
-    <section class="section download" id="download">
       <div class="wrap">
-        <div class="dl-card">
-          <img class="dl-logo" src="/assets/logo.svg" alt="" width="64" height="64" />
-          <h2>Get Relay for Windows</h2>
-          <p class="sub">Version 0.1.0 · Windows 10 and 11 (64-bit) · free</p>
-          <div class="dl-actions">
-            <a class="btn" href="https://github.com/agresh-agrawal/relay/releases/latest/download/Relay-Setup.exe" data-download>
-              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
-              Installer · 5 MB
-            </a>
-            <a class="btn btn-ghost" href="https://github.com/agresh-agrawal/relay/releases/latest/download/Relay-Portable.exe" data-download>Portable .exe · 10 MB</a>
+        <div class="head center">
+          <h2>Everything stays on your PC</h2>
+          <p class="sub">No account, no sign-up, no tracking. Relay only talks to the internet if you add your own AI key, and then only to the provider you chose.</p>
+        </div>
+        <div class="facts">
+          <div class="fact reveal">
+            <span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></svg></span>
+            <h3>Read-only</h3><p>Relay reads the chat files your AI apps already save. It never edits them.</p>
           </div>
-          <p class="fine"><a href="https://github.com/agresh-agrawal/relay/releases">All releases on GitHub</a></p>
-
-          <ol class="install">
-            <li><b>Run the installer.</b> It installs just for you, so no admin rights are needed.</li>
-            <li><b>If Windows says “Windows protected your PC”,</b> click <em>More info</em>, then <em>Run anyway</em>. Relay isn’t code-signed yet. This is normal for new apps.</li>
-            <li><b>Open Relay from the Start menu.</b> A one-minute setup finds your AI chats. After that, the Relay button on the screen edge opens it.</li>
-          </ol>
-          <p class="fine">Some Windows 11 PCs have Smart App Control turned on, which blocks every unsigned app. Relay will never ask you to change security settings. A signed release is on the way.</p>
+          <div class="fact reveal">
+            <span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg></span>
+            <h3>Secrets removed</h3><p>Keys, tokens and passwords are taken out of every handoff before it leaves.</p>
+          </div>
+          <div class="fact reveal">
+            <span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="7.5" cy="15.5" r="5.5"/><path d="m21 2-9.6 9.6M15.5 7.5l3 3L22 7l-3-3"/></svg></span>
+            <h3>Keys locked away</h3><p>Your AI keys go to Windows Credential Manager, never into files.</p>
+          </div>
+          <div class="fact reveal">
+            <span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 14 4-4"/><path d="M3.34 19a10 10 0 1 1 17.32 0"/></svg></span>
+            <h3>Light on your PC</h3><p>Closed, Relay is just the button on the screen edge and uses about 50 MB.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -384,8 +386,7 @@ It hit its usage limit (“Claude usage limit reached · resets 5pm”).
     <!-- FAQ -->
     <section class="section" id="faq">
       <div class="wrap narrow">
-        <div class="head">
-          <p class="kicker">FAQ</p>
+        <div class="head center">
           <h2>Questions</h2>
         </div>
         <div class="faq">
@@ -407,7 +408,11 @@ It hit its usage limit (“Claude usage limit reached · resets 5pm”).
           </details>
           <details>
             <summary>Does it work with ChatGPT, Claude.ai or Gemini in the browser?</summary>
-            <p>Yes, as a destination: Relay copies the whole handoff as one message and opens the site. As a source, copy the web conversation and choose “Paste chat” in Relay. A browser extension is planned.</p>
+            <p>Yes, as a destination: Relay copies the whole handoff as one message and opens the site. As a source, copy the web conversation and choose “Bring in a web chat” in Relay. A browser extension is planned.</p>
+          </details>
+          <details>
+            <summary>Windows blocked it completely. What now?</summary>
+            <p>Some Windows 11 PCs have Smart App Control turned on, which blocks every app that isn’t code-signed, with no “Run anyway” button. Relay will never ask you to change security settings. A signed release is on the way.</p>
           </details>
           <details>
             <summary>Is there a Mac version?</summary>
@@ -420,17 +425,60 @@ It hit its usage limit (“Claude usage limit reached · resets 5pm”).
         </div>
       </div>
     </section>
+
+    <!-- Final call to action -->
+    <section class="final">
+      <div class="wash wash-final" aria-hidden="true"></div>
+      <div class="wrap final-in reveal">
+        <span class="mark"><img src="/assets/logo.svg" alt="" width="36" height="36" /></span>
+        <h2>Keep your AI work going</h2>
+        <p class="sub">Free for Windows 10 and 11.</p>
+        <div class="actions">
+          <a class="pill" href="https://github.com/agresh-agrawal/relay/releases/latest/download/Relay-Setup.exe">
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+            Download for Windows
+          </a>
+          <a class="pill pill-ghost" href="https://github.com/agresh-agrawal/relay">View on GitHub</a>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="foot">
-    <div class="wrap foot-in">
-      <a class="brand" href="#top"><img src="/assets/logo.svg" alt="" width="24" height="24" /><span>Relay</span></a>
-      <p>Keep your AI work going. Free for Windows.</p>
-      <nav aria-label="Footer">
-        <a href="https://github.com/agresh-agrawal/relay">GitHub</a>
-        <a href="https://github.com/agresh-agrawal/relay/releases">Releases</a>
-        <a href="https://github.com/agresh-agrawal/relay/issues">Report a problem</a>
-      </nav>
+    <div class="wrap">
+      <div class="foot-cols">
+        <div class="foot-brand">
+          <a class="brand" href="#top"><img src="/assets/logo.svg" alt="" width="26" height="26" /><span>Relay</span></a>
+          <p>When one AI stops, the next one picks up.</p>
+        </div>
+        <nav aria-label="Download">
+          <h4>Download</h4>
+          <a href="https://github.com/agresh-agrawal/relay/releases/latest/download/Relay-Setup.exe">Installer</a>
+          <a href="https://github.com/agresh-agrawal/relay/releases/latest/download/Relay-Portable.exe">Portable</a>
+          <a href="https://github.com/agresh-agrawal/relay/releases">Release notes</a>
+          <a href="https://github.com/agresh-agrawal/relay/releases/latest/download/READ-ME-FIRST.txt">Read me first</a>
+        </nav>
+        <nav aria-label="Product">
+          <h4>Product</h4>
+          <a href="#demo">Demo</a>
+          <a href="#features">Features</a>
+          <a href="#apps">Works with</a>
+          <a href="#handoff">Sample handoff</a>
+        </nav>
+        <nav aria-label="Help">
+          <h4>Help</h4>
+          <a href="#get-started">Install</a>
+          <a href="#faq">FAQ</a>
+          <a href="#privacy">Privacy</a>
+          <a href="https://github.com/agresh-agrawal/relay/issues">Report a problem</a>
+        </nav>
+      </div>
+      <div class="foot-bottom">
+        <p>© 2026 Relay · Made for Windows 10 and 11</p>
+        <a class="icon-link" href="https://github.com/agresh-agrawal/relay" aria-label="Relay on GitHub">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.58.23 2.75.11 3.04.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.39-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg>
+        </a>
+      </div>
     </div>
   </footer>
 
