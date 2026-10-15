@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://relayhandoff.agreshagrawal.com/sitemap.xml
