@@ -1,0 +1,6 @@
+# Release files go to GitHub Releases, never into the repo.
+*.exe
+*.msi
+.vercel
+.DS_Store
+Thumbs.db
