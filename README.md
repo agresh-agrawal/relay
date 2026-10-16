@@ -5,10 +5,10 @@
 <h1 align="center">Relay</h1>
 
 <p align="center"><b>When your AI stops halfway, the next one picks up.</b><br />
-A small panel on the side of your Windows screen that hands an AI's unfinished work to the next AI.</p>
+A small button on the edge of your Windows screen that reads from any AI agent and hands its unfinished work to any other AI.</p>
 
 <p align="center">
-  <a href="https://github.com/agresh-agrawal/relay/releases/latest/download/Relay-Setup.exe"><b>Download for Windows</b></a> ·
+  <a href="https://relayhandoff.agreshagrawal.com/downloads/Relay-Setup.exe"><b>Download for Windows</b></a> ·
   <a href="https://relayhandoff.agreshagrawal.com">Website</a> ·
   <a href="https://github.com/agresh-agrawal/relay/releases">All releases</a>
 </p>
@@ -17,7 +17,7 @@ A small panel on the side of your Windows screen that hands an AI's unfinished w
 
 You're three hours into building something with Claude Code and it stops: *usage limit reached · resets 5pm*. Starting again in another AI means explaining the goal, your rules, what's finished, which files changed and what broke.
 
-**Relay does that part for you.** A small Relay button sits on the edge of your screen and follows your Claude Code, Codex and Antigravity chats. When one stops, click it: Relay packs exactly what the next AI needs and opens your project in the AI you pick. Paste, and it carries on.
+**Relay does that part for you.** A small Relay button sits on the edge of your screen and follows your AI agents as they work: Claude Code, Codex, Antigravity, Cursor, Copilot, Cline, Gemini CLI and more. When one stops, click it: Relay packs exactly what the next AI needs and opens your project in the AI you pick. Paste, and it carries on.
 
 <p align="center">
   <img src="website/assets/shots/home.webp" width="260" alt="Relay: your AI chats and usage limits" />
@@ -30,7 +30,7 @@ You're three hours into building something with Claude Code and it stops: *usage
 | | |
 | --- | --- |
 | **Installer** (recommended) | [Relay-Setup.exe](https://github.com/agresh-agrawal/relay/releases/latest/download/Relay-Setup.exe) · 5 MB · no admin rights needed |
-| **Portable** | [Relay-Portable.exe](https://github.com/agresh-agrawal/relay/releases/latest/download/Relay-Portable.exe) · 10 MB · nothing to install |
+| **Portable** | [Relay-Portable.exe](https://github.com/agresh-agrawal/relay/releases/latest/download/Relay-Portable.exe) · 11 MB · nothing to install |
 
 Windows 10 and 11, 64-bit. Free.
 
@@ -46,7 +46,9 @@ Some Windows 11 PCs have *Smart App Control* on, which blocks every unsigned app
 
 - **Watches your limits.** Shows when Claude's 5-hour window resets and roughly how much is used; Codex's exact percentages, weekly too; and how full each chat's memory is.
 - **Keeps a handoff saved.** While an AI works, Relay keeps `.relay/HANDOFF.md` up to date in your project, even while Relay is closed.
-- **Hands off in two seconds.** `Ctrl+Alt+R` or *Continue in another AI* → pick Antigravity, VS Code, Cursor, Windsurf, Claude Code, Codex CLI, Gemini CLI, ChatGPT, Claude, Gemini or AI Studio.
+- **Reads from any AI agent.** Claude Code, Codex, Antigravity, Cursor, GitHub Copilot Chat, Gemini CLI, Qwen Code, Cline, Roo Code, Kilo Code, OpenCode, Continue and Aider, plus any folder where another AI saves its chats. Paste a web chat, or import a ChatGPT or Claude data export.
+- **Hands off to any AI in two seconds.** `Ctrl+Alt+R` or *Continue in another AI* → 40 AIs: coding apps (Antigravity, VS Code, Cursor, Windsurf, Kiro, Trae, Zed, JetBrains…), terminal agents (Claude Code, Codex, Gemini CLI, OpenCode, Copilot CLI, Aider…) and chat sites (ChatGPT, Claude, Gemini, Perplexity, DeepSeek, Grok, Le Chat…). Add your own app, command or website in Settings.
+- **One search for everything.** `Ctrl+K` finds any chat by what was said in it, any AI, any action.
 - **Writes a short brief, not a chat dump.** Goal, your rules word for word, what's done, what's left, where it stopped, open problems and changed files. About 640 tokens for a three-hour session.
 - **Hides secrets.** API keys, tokens and passwords are removed before anything leaves your PC.
 - **Works without an API key.** Add one (Anthropic, OpenAI, Gemini, OpenRouter, Ollama) for an even sharper brief. Keys are stored in Windows Credential Manager.
@@ -58,14 +60,18 @@ Some Windows 11 PCs have *Smart App Control* on, which blocks every unsigned app
 | `Ctrl+Alt+Space` | Open / close Relay |
 | `Ctrl+Alt+R` | Continue in another AI |
 | `Ctrl+Alt+S` | Add a screenshot to the handoff |
+| `Ctrl+K` | Search chats, AIs and actions (inside Relay) |
 
 ## Privacy
 
-Everything stays on your PC. Relay has no account and no tracking. It reads (never changes) the chat files your AI apps already save:
+Everything stays on your PC. Relay has no account and no tracking. It reads (never changes) the chats your AI tools already save, for the tools on your PC:
 
-- `%USERPROFILE%\.claude\projects` (Claude Code)
-- `%USERPROFILE%\.codex\sessions` (Codex)
-- `%USERPROFILE%\.gemini\antigravity` (Antigravity)
+- `%USERPROFILE%\.claude\projects` (Claude Code), `%USERPROFILE%\.codex\sessions` (Codex), `%USERPROFILE%\.gemini\antigravity` (Antigravity), `%USERPROFILE%\.gemini\tmp` (Gemini CLI), `%USERPROFILE%\.qwen\tmp` (Qwen Code), `%USERPROFILE%\.continue\sessions` (Continue)
+- Cursor's and OpenCode's chat databases, opened read-only (chat tables only)
+- VS Code's chat history (GitHub Copilot Chat) and the Cline, Roo Code and Kilo Code task folders
+- `.aider.chat.history.md` in your projects (Aider), and any folder you add
+
+It never reads the sign-in or account files of these tools.
 
 It only talks to the internet if you add your own AI key, and then only to the provider you chose. Settings live in `%APPDATA%\com.relay.app`.
 

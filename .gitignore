@@ -1,6 +1,8 @@
-# Release files go to GitHub Releases, never into the repo.
+# Release files go to GitHub Releases. The only exception: the copies the
+# website serves from its own domain so downloads start on the first click.
 *.exe
 *.msi
+!website/downloads/*.exe
 .vercel
 .DS_Store
 Thumbs.db

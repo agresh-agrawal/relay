@@ -294,3 +294,26 @@ document.querySelectorAll('[data-copy]').forEach((btn) => {
 // Relay is a Windows app: tell phone and Mac visitors before they download.
 const ua = navigator.userAgent
 if (!(/Windows/i.test(ua) && !/Windows Phone/i.test(ua))) document.querySelectorAll('.os-note').forEach((n) => (n.hidden = false))
+
+// Downloads come straight from this site, so they start on the first click.
+// Say so right away, with what to do next and a link in case the browser blocked it.
+let dlTimer
+document.querySelectorAll('[data-dl]').forEach((a) => {
+  a.addEventListener('click', () => {
+    let toast = document.querySelector('.dl-toast')
+    if (!toast) {
+      toast = document.createElement('div')
+      toast.className = 'dl-toast'
+      toast.setAttribute('role', 'status')
+      toast.innerHTML = '<span class="dl-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg></span><div><b></b><p></p></div><button class="dl-x" aria-label="Close">×</button>'
+      toast.querySelector('.dl-x').addEventListener('click', () => toast.classList.remove('on'))
+      document.body.appendChild(toast)
+    }
+    const file = a.dataset.dl
+    toast.querySelector('b').textContent = `Downloading ${file}`
+    toast.querySelector('p').innerHTML = `Open it when it finishes. If Windows says it protected your PC, click <i>More info</i>, then <i>Run anyway</i>. Didn’t start? <a href="${a.getAttribute('href')}" download>Try again</a>.`
+    requestAnimationFrame(() => toast.classList.add('on'))
+    clearTimeout(dlTimer)
+    dlTimer = setTimeout(() => toast.classList.remove('on'), 12000)
+  })
+})

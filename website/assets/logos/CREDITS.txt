@@ -2,8 +2,12 @@ App logos used to show which tools Relay works with. Each logo is a trademark
 of its owner; Relay is not affiliated with or endorsed by them.
 
 - claude-code, claude, codex, chatgpt (OpenAI), gemini, gemini-cli,
-  antigravity, cursor, windsurf, ai-studio:
+  antigravity, cursor, windsurf, ai-studio, copilot (GitHub Copilot),
+  ms-copilot, cline, roo-code, kilo-code, opencode, qwen-code, qwen, trae,
+  kiro, perplexity, deepseek, grok, mistral, meta, kimi, poe, huggingface,
+  devin, replit, lovable, v0, manus, openrouter:
   LobeHub Icons (@lobehub/icons-static-svg), MIT licence.
   https://github.com/lobehub/lobe-icons
-- vscode: svg-logos by Gil Barbara via Iconify (@iconify-json/logos), CC0.
+- vscode, jetbrains, bolt: svg-logos by Gil Barbara via Iconify
+  (@iconify-json/logos), CC0.
   https://github.com/gilbarbara/logos
